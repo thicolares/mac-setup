@@ -12,18 +12,10 @@ brew bundle
 echo "Install XCode CLI Tool"
 xcode-select --install
 
-echo "Installing Oh My Zsh"
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-echo "source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-sed -io 's/^plugins=.*/plugins=(autojump git brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker git-extras git-prompt)/' ~/.zshrc
-sed -io 's/^ZSH_THEME.*/ZSH_THEME="dpoggi"/' ~/.zshrc
-
-echo "Installing Tmux Settings"
-git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
-cp ~/.tmux/.tmux.conf.local ~/
+#echo "Installing Tmux Settings"
+#git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+#ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+#cp ~/.tmux/.tmux.conf.local ~/
 
 echo "Install VIM settings"
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -43,6 +35,16 @@ git config --global core.editor $(which vim)
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 git config --global alias.tree "log --graph --full-history --all --color --date=short --pretty=format:'%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset'"
 
-
 echo "Enabling Services"
 open /Applications/Tiles.app
+
+echo "Installing Oh My Zsh"
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+echo "source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+sed -io 's/^plugins=.*/plugins=(autojump git brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker git-extras git-prompt)/' ~/.zshrc
+sed -io 's/^ZSH_THEME.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc
+echo "Open/restart the terminal to setup the powerlevel10k theme for Oh My Zsh."
+echo "Read more: https://github.com/romkatv/powerlevel10k#oh-my-zsh""
+
