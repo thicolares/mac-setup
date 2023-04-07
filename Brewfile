@@ -4,19 +4,20 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 # Utilities
-#cask "tiles"
+cask "tiles"
 #cask "firefox"
-#cask "google-chrome"
+cask "google-chrome"
 #cask "grammarly"
 cask "iterm2"
 cask "slack"
 #cask "telegram"
 #cask "whatsapp"
 #cask "transmission"
-#cask "spotify"
+cask "spotify"
 cask "flycut"
 brew "jq"
 cask "raycast"
+cask "zoom"
 
 # Internet security companies can use Nmap to scan a system and understand what weaknesses exist that a hacker could potentially exploit
 # https://www.holmsecurity.com/blog/what-is-nmap#:~:text=Internet%20security%20companies%20can%20use,open%20ports%20and%20other%20weaknesses.
