@@ -47,6 +47,7 @@ git config --global alias.br branch
 git config --global core.editor $(which vim)
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 git config --global alias.tree "log --graph --full-history --all --color --date=short --pretty=format:'%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset'"
+git config --global init.defaultBranch main
 
 echo "Enabling Services"
 open /Applications/Tiles.app
