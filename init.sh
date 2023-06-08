@@ -52,3 +52,35 @@ git config --global init.defaultBranch main
 echo "Enabling Services"
 open /Applications/Tiles.app
 
+echo "Installing Oh My Zsh plugins"
+echo "  Installing zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+echo "  Installing zsh-completions"
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+echo "  Installing zsh-autosuggestion"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+
+cat << EndOfInstructions
+Now run:
+  vim ~/.zshrc
+
+Add the names of the cloned repositories to the plugin list:
+  plugins=(
+    docker
+    docker-compose
+    git
+    python
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-completions
+  )
+
+  # command for zsh-completions
+  autoload -U compinit && compinit
+
+After saving ~/.zshrc, run:
+  source ~/.zshrc
+EndOfInstructions
