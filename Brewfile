@@ -32,6 +32,8 @@ brew "docker-compose"
 
 brew "zsh"
 brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+
 
 # Dev
 cask "postman"
