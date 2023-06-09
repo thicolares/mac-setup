@@ -45,7 +45,7 @@ brew "vim"
 brew "zlib"
 cask "sublime-text"
 cask "macdown"
-cask "sequel-pro"
+cask "sequel-ace"
 cask "visual-studio-code"
 cask "logseq"
 
