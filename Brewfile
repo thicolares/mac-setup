@@ -37,6 +37,7 @@ brew "zsh-syntax-highlighting"
 
 # Dev
 cask "postman"
+cask "insomnia"
 brew "git"
 brew "nvm"
 brew "node"
