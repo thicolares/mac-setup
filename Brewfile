@@ -47,6 +47,7 @@ brew "zlib"
 cask "sublime-text"
 cask "macdown"
 cask "sequel-ace"
+cask "tableplus"
 cask "visual-studio-code"
 cask "logseq"
 
